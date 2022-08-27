@@ -1,11 +1,13 @@
 import React from 'react'
 import * as S from './styles'
 
-interface IApp  {}
+interface IApp  {
+  children: React.ReactNode
+}
 
-const App: React.FC<IApp> = ({}) => {
+const App: React.FC<IApp> = ({children}) => {
   return (
-    <S.Container>App</S.Container>
+    <S.Container>{children}</S.Container>
   )
 }
 

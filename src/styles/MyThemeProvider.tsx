@@ -5,9 +5,8 @@ import { GlobalStyles } from './global-styles';
 import React, { ReactNode } from 'react';
 
 interface IMyThemeProvider {
-  children?: ReactNode
+  children: React.ReactNode
 }
-
 export const MyThemeProvider: React.FC<IMyThemeProvider> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
@@ -17,6 +16,4 @@ export const MyThemeProvider: React.FC<IMyThemeProvider> = ({ children }) => {
   );
 };
 
-MyThemeProvider.propTypes = {
-  children: P.node.isRequired,
-};
+
