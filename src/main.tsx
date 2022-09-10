@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import App from './shared/components/App'
 import { MyThemeProvider } from './shared/styles/MyThemeProvider'
-import App from './modules/App/views/AppView'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <MyThemeProvider>
-      <App>Hello</App>
+      <App/>
     </MyThemeProvider>
   </React.StrictMode>
 )
