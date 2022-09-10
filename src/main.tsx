@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { MyThemeProvider } from './styles/MyThemeProvider'
-import App from './templates/App'
+import { MyThemeProvider } from './shared/styles/MyThemeProvider'
+import App from './modules/App/views/AppView'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
