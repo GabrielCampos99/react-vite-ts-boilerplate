@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState } from 'react';
 
 export type IHomeContextData = {
+  text: string
+  setText: React.Dispatch<React.SetStateAction<string>>
 };
 interface Props {
   children: React.ReactNode;
@@ -9,7 +11,11 @@ interface Props {
 const HomeContext = createContext<IHomeContextData>({} as IHomeContextData);
 
 const HomeProvider: React.FC<Props> = ({ children }) => {
-  return <HomeContext.Provider value={{}}>{children}</HomeContext.Provider>;
+  const [text, setText] = useState('Valor vindo do context compartilhado')
+  return <HomeContext.Provider value={{
+    text,
+    setText
+  }}>{children}</HomeContext.Provider>;
 };
 
 function useHome() {
